@@ -1,0 +1,59 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Produtos - Quest",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/produtos": {
+            "get": {
+                "description": "Rota de consulta dos dados",
+                "responses": {
+                    "200": {
+                        "description": "Retorno com sucesso!"
+                    }
+                }
+            },
+            "post": {
+                "description": "Rota de cadastro do produto",
+                "parameters": [
+                    {
+                        "name": "nome",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "name": "preco",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "name": "descricao",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "name": "imagem",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Retorno com sucesso!"
+                    }
+                }
+            }
+        },
+        "/api/produtos/{id}": {
+            "get": {
+                "description": "Rota de consulta para um produto especifico",
+                "responses": {
+                    "200": {
+                        "description": "Retorno com sucesso!"
+                    }
+                }
+            }
+        }
+    }
+}
